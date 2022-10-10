@@ -6,17 +6,10 @@ public class TestAdressePostale {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		AdressePostale a = new AdressePostale();
-		a.numeroDeRue = 5;
-		a.libelléDeRue = "rue de la Liberté";
-		a.codePostal = 44200;
-		a.ville = "Nantes";
-		
-		AdressePostale n = new AdressePostale();
-		n.numeroDeRue = 15;
-		n.libelléDeRue = "rue de la Paix";
-		n.codePostal = 44610;
-		n.ville = "Indre";
+		AdressePostale a = new AdressePostale(5, "rue de la Liberté", 44200, "Nantes");
+		AdressePostale n = new AdressePostale(15, "rue de la Paix", 44610, "Indre");
+		System.out.println(n.codePostal);
+		System.out.println(a.codePostal);
 	}
 
 }
