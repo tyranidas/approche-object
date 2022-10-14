@@ -18,11 +18,11 @@ public class TestOperation {
 		
 		
 		
-		if (tab1[i].getType()== "CREDIT")
+		if (tab1[i].getType().equals("CREDIT"))
 			{
 			solde +=  tab1[i].montant;
 			}
-		if (tab1[i].getType()== "DEBIT")
+		if (tab1[i].getType().equals("DEBIT"))
 			{
 			solde -=  tab1[i].montant;
 			}

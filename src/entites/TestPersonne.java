@@ -10,12 +10,12 @@ public class TestPersonne {
 		
 		Personne martine = new Personne("A la plage", "Martine", new AdressePostale(5, "rue de la Liberté", 44200, "Nantes"));
 		
-		String bigName = martine.majName(martine.nom);
+		martine.majName();
 		martine.setAdresse(15, "rue trucmuche", 44610, "Indre");
-		System.out.println(bigName);
+		
 		System.out.println(bob.prénom);
 		AdressePostale name = martine.getAdresse();
-		System.out.println(martine.adresse.libelléDeRue);
+		System.out.println(name.ville);
 	}
 
 }
