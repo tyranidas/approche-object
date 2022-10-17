@@ -1,8 +1,13 @@
 package listes;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import listes.ComparatorHabitant;
+import listes.ComparatorNom;
 
-public class Ville {
+public class Ville implements Comparable<Ville>
+{
+	
 	private String name;
 	private int pop;
 	
@@ -52,7 +57,7 @@ public class Ville {
 			System.out.println(liste1.get(i));
 		}
 		
-		int maxPop = 0;
+	/*	int maxPop = 0;
 		String maxCity = null;
 		for (int i = 0; i < liste1.size(); i++)
 		{
@@ -86,13 +91,49 @@ public class Ville {
 				
 			}
 		}
+		*/
 		
 		
+		/*
+		Collections.sort(liste1, new ComparatorHabitant());
+		
+		for (int i = 0; i < tab1.length; i++)
+		{
+			liste1.add(tab1[i]);
+			System.out.println(liste1.get(i));
+		}
+		*/
+	Collections.sort(liste1, new ComparatorNom());
+		
+		for (int i = 0; i < tab1.length; i++)
+		{
+			liste1.add(tab1[i]);
+			System.out.println(liste1.get(i));
+		}
 		
 		
 		
 	
 		
+	}
+
+	@Override
+	public int compareTo(Ville autre) {
+		/* int result = this.pop.compareTo(autre.getPop());
+		return result;
+		*/
+		if  (this.pop > autre.getPop())
+		{
+			return 1;
+		}
+		else if  (this.pop < autre.getPop())
+		{
+			return -1;
+		}
+		else 
+		{
+			return 0;
+		}
 	}
 		
 }
