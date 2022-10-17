@@ -57,7 +57,7 @@ public class Ville implements Comparable<Ville>
 			System.out.println(liste1.get(i));
 		}
 		
-	/*	int maxPop = 0;
+		int maxPop = 0;
 		String maxCity = null;
 		for (int i = 0; i < liste1.size(); i++)
 		{
@@ -91,10 +91,19 @@ public class Ville implements Comparable<Ville>
 				
 			}
 		}
-		*/
+		
+		for (int i = 0; i < liste1.size(); i++)
+		{
+			
+			if (liste1.get(i).pop >= 100000)
+			{
+		
+			 liste1.get(i).setName(liste1.get(i).name.toUpperCase());
+				
+			}
+		}
 		
 		
-		/*
 		Collections.sort(liste1, new ComparatorHabitant());
 		
 		for (int i = 0; i < tab1.length; i++)
@@ -102,7 +111,7 @@ public class Ville implements Comparable<Ville>
 			liste1.add(tab1[i]);
 			System.out.println(liste1.get(i));
 		}
-		*/
+		
 	Collections.sort(liste1, new ComparatorNom());
 		
 		for (int i = 0; i < tab1.length; i++)
