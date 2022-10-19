@@ -17,7 +17,7 @@ public class TestDates {
 		System.out.println(d4);
 		
 		Date d5 = new Date();
-		String d6 = formateur2.format(d1);
+		String d6 = formateur.format(d1);
 		System.out.println(d6);
 	}
 

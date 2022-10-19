@@ -19,7 +19,8 @@ public class TestCalendar {
 		Locale france = Locale.FRANCE;
 		Locale deutch = Locale.GERMAN;
 		Locale chinese = Locale.CHINESE;
-		Locale[] langage= { chinese, deutch, france};
+		Locale russe = new Locale ("ru", "RU");
+		Locale[] langage= { chinese, deutch, france, russe};
 		
 		Calendar cal3 = Calendar.getInstance();
 		Date date2 = cal3.getTime();
