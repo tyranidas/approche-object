@@ -40,16 +40,17 @@ public class Ville implements Comparable<Ville>
 	public static void main(String[] args) {
 		
 		ArrayList<Ville> liste1 = new ArrayList <Ville>();
-		Ville Nice = new Ville ("Nice", 343000);
-		Ville Carcassonne = new Ville ("Carcassonne", 47800);
-		Ville Narbonne = new Ville ("Narbonne", 53400);
-		Ville Lyon = new Ville ("Lyon", 484000);
-		Ville Foix = new Ville ("Foix", 9700);
-		Ville Pau = new Ville ("Pau", 77200);
-		Ville Marseille = new Ville ("Marseille", 850700);
-		Ville Tarbes = new Ville ("Tarbes", 40600);
+		Ville nice = new Ville ("Nice", 343000);
+		Ville nice2 = new Ville ("Nice", 343000);
+		Ville carcassonne = new Ville ("Carcassonne", 47800);
+		Ville narbonne = new Ville ("Narbonne", 53400);
+		Ville lyon = new Ville ("Lyon", 484000);
+		Ville foix = new Ville ("Foix", 9700);
+		Ville pau = new Ville ("Pau", 77200);
+		Ville marseille = new Ville ("Marseille", 850700);
+		Ville tarbes = new Ville ("Tarbes", 40600);
 		
-		Ville[] tab1 = {Nice, Carcassonne, Narbonne, Lyon, Foix, Pau, Marseille, Tarbes};
+		Ville[] tab1 = {nice, carcassonne, narbonne, lyon, foix, pau, marseille, tarbes};
 		
 		for (int i = 0; i < tab1.length; i++)
 		{
@@ -120,12 +121,37 @@ public class Ville implements Comparable<Ville>
 			System.out.println(liste1.get(i));
 		}
 		
+		System.out.println(nice.equals(nice2));;
 		
 		
 	
 		
 	}
-
+	@Override
+	public boolean equals(Object object)
+	{
+		if (!(object instanceof Ville))
+			{
+				return false;
+			}
+		
+		Ville autre = (Ville) object;
+			//(pop == autre.getPop()) &&
+		if ( (this.pop == autre.getPop()) && autre.getName().equals(this.getName()))
+		{
+			return true;
+		}
+		
+			return false;
+		
+			
+		
+			
+			
+			
+		
+	}
+	
 	@Override
 	public int compareTo(Ville autre) {
 		/* int result = this.pop.compareTo(autre.getPop());
