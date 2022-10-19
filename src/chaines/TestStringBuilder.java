@@ -12,22 +12,25 @@ public class TestStringBuilder {
 		// Code à chronométrer
 		
 		StringBuilder bbis = new StringBuilder();
-		for (int i = 0; i < 100; i++)
+		for (int i = 0; i < 100000; i++)
 		{
 			bbis.append(i);
 		}
 		
-		System.out.println(bbis);
+	
+		long fin = System.currentTimeMillis();
+		System.out.println("Temps écoulé en millisecondes :" + (fin - debut));
 		
-		String b = null;
-		for (int i = 0; i < 100; i++)
+		debut = System.currentTimeMillis();
+		String b = "pouet";
+		for (int i = 0; i < 100000; i++)
 		{
 			
 			b = b+i;
 		}
 		
-		System.out.println(b);
-		long fin = System.currentTimeMillis();
+	
+		fin = System.currentTimeMillis();
 		System.out.println("Temps écoulé en millisecondes :" + (fin - debut));
 	}
 
