@@ -2,8 +2,6 @@ package listes;
 
 import java.util.ArrayList;
 
-import testnumerotation.Saison;
-
 public class TestContinentAvecEnum {
 
 	public static void main(String[] args) {
