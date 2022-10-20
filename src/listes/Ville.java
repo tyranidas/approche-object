@@ -1,24 +1,23 @@
 package listes;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import listes.ComparatorHabitant;
-import listes.ComparatorNom;
-
 public class Ville implements Comparable<Ville>
 {
 	
 	private String name;
 	private int pop;
+	private Continent continent;
 	
-	public Ville(String name, int pop) {
+	
+
+	public Ville(String name, int pop, String continent) {
 		this.name = name;
 		this.pop = pop;
+		this.continent = Continent.ofLibelle(continent);
 	}
 	
 	public String toString()
 	{
-		return "La ville "+this.name+" contient "+this.pop+" habitants";
+		return "La ville "+this.name+" contient "+this.pop+" habitants et se trouve sur le continent "+this.continent.getLibellé();
 	}
 	
 	public String getName() {
@@ -36,8 +35,18 @@ public class Ville implements Comparable<Ville>
 	public void setPop(int pop) {
 		this.pop = pop;
 	}
+	
+	public Continent getContinent() {
+		return continent;
+	}
 
-	public static void main(String[] args) {
+	public void setContinent(Continent continent) {
+		this.continent = continent;
+	}
+	
+
+	/*
+	 * public static void main(String[] args) {
 		
 		ArrayList<Ville> liste1 = new ArrayList <Ville>();
 		Ville nice = new Ville ("Nice", 343000);
@@ -126,7 +135,7 @@ public class Ville implements Comparable<Ville>
 		
 	
 		
-	}
+	}*/
 	@Override
 	public boolean equals(Object object)
 	{
